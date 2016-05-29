@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Core.User>
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div ng-app>
+    <input type="text" ng-init="message='test'" ng-model="message" />
+    <label>{{message}}</label>
+
+    @foreach (var user in Model)
+    {
+        <div>
+            @Html.DisplayFor(m => user.Name)
+        </div>
+    }
+    </div>
+
