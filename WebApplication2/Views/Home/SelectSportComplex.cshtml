@@ -1,0 +1,22 @@
+﻿@model Core.User
+
+@{
+    ViewBag.Title = "title";
+    Layout = "../_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+select new sport complex:
+@using (Html.BeginForm("EditSportComplex", "Home", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Id)
+
+    @Html.Action("ListSportComplex", "Home")
+
+    <p>
+
+        <input type="submit" value="Save" />
+
+    </p>
+}

@@ -12,7 +12,8 @@
     @foreach (var user in Model)
     {
         <div>
-            @Html.DisplayFor(m => user.Name)
+            @Html.DisplayFor(m => user.Name) - @Html.DisplayFor(m => user.SportComplex.Name)
+            @Html.ActionLink("Edit", "SelectSportComplex", new {id=user.Id})
         </div>
     }
     </div>

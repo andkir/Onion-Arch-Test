@@ -1,0 +1,7 @@
+﻿<div ng-repeat="user in users">
+    <label>{{user.Name}}</label>
+    -
+    <label>{{user.SportComplexName}}</label>
+
+    <a ui-sref="edit({id:user.Id})">Edit</a>
+</div>

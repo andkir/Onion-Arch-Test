@@ -29,7 +29,7 @@ namespace Tests
             sportListOutputMock.Expect(o => o.GetSportList(Arg<IEnumerable<SportType>>.List.ContainsAll(sportTypes)))
                 .Repeat.Once().Return("data");
 
-            var sut = new HomeController(userRepositoryMock, sportTypeRepositoryMock, sportListOutputMock);
+            var sut = new HomeController(userRepositoryMock, sportTypeRepositoryMock, sportListOutputMock, null);
 
             var result = sut.ListSportTypes();
 

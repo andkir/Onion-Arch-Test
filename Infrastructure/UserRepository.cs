@@ -14,6 +14,10 @@ namespace Infrastructure
             this.repository = repository;
         }
 
+        public UserRepository(): this(new BaseRepository<User>())
+        {
+        }
+
         public User GetById(int id)
         {
             return repository.GetById(id);
